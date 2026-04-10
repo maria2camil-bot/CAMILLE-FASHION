@@ -1,0 +1,43 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.hero-section {
+  height: 400px;
+  width: 100%;
+  background-image: url('path/to/your/image.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.category-button {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.category-button:hover {
+  background-color: #e0e0e0;
+}
+
+.adult-fashion {
+  background-color: #4CAF50; /* Green */
+}
+
+.baby-fashion {
+  background-color: #2196F3; /* Blue */
+}

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Switch, Route, Router as WouterRouter, Link, useLocation } from "wouter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -73,26 +72,6 @@ function Footer() {
         </p>
       </div>
     </footer>
-  );
-}
-
-function Router() {
-  return (
-    <div className="flex flex-col min-h-[100dvh]">
-      <Navbar />
-      <main className="flex-1">
-        <Switch>
-          <Route path="/" component={Home} />
-          <Route path="/patronaje-basico" component={PatronajeBasico} />
-          <Route path="/patronaje-pro" component={PatronajePro} />
-          <Route path="/diseno-3d" component={Diseno3D} />
-          <Route path="/jardin-de-lila" component={JardinDeLila} />
-          <Route path="/info" component={Info} />
-          <Route component={NotFound} />
-        </Switch>
-      </main>
-      <Footer />
-    </div>
   );
 }
 

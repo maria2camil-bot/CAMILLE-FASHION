@@ -2,8 +2,9 @@ export default function App() {
   return (
     <div className="w-28 h-40 border-2 border-cyan-300 rounded-3xl mx-auto mt-4"></div>
 
-     <div className="mt-8">
-  <p className="text-xs text-purple-300 mb-3 text-center">
+     <div className="w-28 h-40 border-2 border-cyan-300 rounded-3xl mx-auto mt-4"></div>
+       <div className="mt-8">
+         <p className="text-xs text-purple-300 mb-3 text-center">
     Pattern Blueprint
   </p>
 

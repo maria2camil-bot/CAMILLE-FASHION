@@ -1,1 +1,62 @@
-import React, { useState } from 'react';\n\nconst App = () => {\n    const [view, setView] = useState('home');\n    const [measurements, setMeasurements] = useState({ height: '', weight: '' });\n    const [ageGroup, setAgeGroup] = useState('adult');\n\n    const handleMeasurementChange = (event) => {\n        const { name, value } = event.target;\n        setMeasurements({ ...measurements, [name]: value });\n    };\n\n    const handleAgeGroupChange = (event) => {\n        setAgeGroup(event.target.value);\n    };\n\n    return (\n        <div>\n            <h1>Camille Fashion</h1>\n            <div>\n                <button onClick={() => setView('home')}>Home</button>\n                <button onClick={() => setView('catalog')}>Catalog</button>\n                <button onClick={() => setView('contact')}>Contact</button>\n            </div>\n            <div>\n                <h2>Selected View: {view}</h2>\n                <h3>Measurements</h3>\n                <input type="text" name="height" value={measurements.height} onChange={handleMeasurementChange} placeholder="Height" />\n                <input type="text" name="weight" value={measurements.weight} onChange={handleMeasurementChange} placeholder="Weight" />\n                <h3>Age Group</h3>\n                <select value={ageGroup} onChange={handleAgeGroupChange}>\n                    <option value="adult">Adult</option>\n                    <option value="baby">Baby</option>\n                </select>\n            </div>\n        </div>\n    );\n};\n\nexport default App;
+import React, { useState } from 'react';
+
+const App = () => {
+  const [view, setView] = useState('home');
+  const [measurements, setMeasurements] = useState({
+    height: '',
+    weight: ''
+  });
+
+  const [ageGroup, setAgeGroup] = useState('adult');
+
+  const handleMeasurementChange = (event) => {
+    const { name, value } = event.target;
+
+    setMeasurements({
+      ...measurements,
+      [name]: value
+    });
+  };
+
+  const handleAgeGroupChange = (event) => {
+    setAgeGroup(event.target.value);
+  };
+
+  return (
+    <div>
+      <h1>Camille Fashion</h1>
+
+      <button onClick={() => setView('home')}>Inicio</button>
+      <button onClick={() => setView('catalog')}>Catálogo</button>
+      <button onClick={() => setView('contact')}>Contacto</button>
+
+      <h2>Vista seleccionada: {view}</h2>
+
+      <input
+        type="text"
+        name="height"
+        value={measurements.height}
+        onChange={handleMeasurementChange}
+        placeholder="Altura"
+      />
+
+      <input
+        type="text"
+        name="weight"
+        value={measurements.weight}
+        onChange={handleMeasurementChange}
+        placeholder="Peso"
+      />
+
+      <select
+        value={ageGroup}
+        onChange={handleAgeGroupChange}
+      >
+        <option value="adult">Adulto</option>
+        <option value="baby">Bebé</option>
+      </select>
+    </div>
+  );
+};
+
+export default App;
